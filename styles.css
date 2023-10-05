@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Calibri,sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.panel{
+    width: 50px;
+    height: 100vh;
+    box-shadow: 0 0 10px black;
+    margin: 10px;
+    border-radius: 20px;
+    flex: 1;
+    background: no-repeat scroll center;
+    transition: all 0.5s linear;
+    filter: grayscale(1);
+    position: relative;
+    background-size: cover;
+}
+.panel h3{
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    color: white;
+    font-size: 30px;
+    transform: rotate(-90deg);
+    transition: all 0.5s linear;
+}
+.active{
+    flex: 6;
+    filter: grayscale(0);
+}
+.active h3{
+    transform: rotate(0deg);
+    left: 30px;
+    /* top: 50px; */
+    text-shadow: 0 0 3px black;
+}
+
+/* #panel-1{ background-image: url("img/card_1.jpg")} */
+/* #panel-2{ background-image: url("img/card_2.jpg")}
+#panel-3{ background-image: url("img/card_3.jpg")}
+#panel-4{ background-image: url("img/card_4.jpg")}
+#panel-5{ background-image: url("img/card_5.jpg")}
+#panel-6{ background-image: url("img/card_6.jpg")} */
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+    .panel{
+        width: 100%;
+    }
+    .panel h3{
+        font-size: 18px;
+        bottom: 5px;
+        transform: rotate(0deg);
+        left: 20px;
+    }
+  }
